@@ -20,7 +20,7 @@ export default function Layout({children}) {
 
           {/* 메뉴 */}
           <Box w='inherit' h={'120px'} bg={'gray.900'} position={'fixed'} bottom={0} >
-            <HStack h={'inherit'} justifyContent={'space-between'} alignItems={'center'}>
+            <HStack h={'inherit'} justifyContent={'space-around'} alignItems={'center'}>
               <Link to="/">
               <VStack color={'white'} w='full'>
                 <AiFillHome size={32} />
