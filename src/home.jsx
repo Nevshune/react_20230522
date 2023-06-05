@@ -1,5 +1,6 @@
 import { Box, Grid, GridItem, Text, VStack } from "@chakra-ui/react";
 import Layout from "./Layout";
+import { Link } from "react-router-dom";
 
 const NewItem = [
     {text : "팔공산 투어" , image : "https://cdn.pixabay.com/photo/2014/09/07/22/17/forest-438432_960_720.jpg"},
@@ -69,11 +70,13 @@ export default function Home() {
                     {
                         dataTour.map((item, i) => (
                             <GridItem key={i} w={'full'} h={'120px'} backgroundImage={`url(${item.image})`} backgroundSize="cover" backgroundPosition={'center'} rounded={"lg"} position={"relative"}>
+                                <Link to="/detail">
                                 <Box position={"absolute"} top={0} left={0} width={"full"} height={"full"} bgGradient={'linear(to-r,rgba(255, 255, 255, 0.7),rgba(255, 255, 255, 0),rgba(255, 255, 255, 0.7))'}>
                                     <Text position={"absolute"} top={'50%'} left={'50%'} transform={'translate(-50%, -50%)'} fontWeight={900} fontSize={20} color={'gray.100'} textAlign={'center'}>
                                         {item.text}
                                     </Text>
                                 </Box>
+                                </Link>
                             </GridItem>
                         ))}
 
